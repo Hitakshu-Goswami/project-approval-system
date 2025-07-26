@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { AuthWrapper } from '@/components/AuthWrapper';
+import { ProjectForm } from '@/components/ProjectForm';
+import { ProjectsList } from '@/components/ProjectsList';
 
 const Index = () => {
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  const handleProjectSubmitted = () => {
+    setRefreshTrigger(prev => prev + 1);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <AuthWrapper>
+      {(user) => (
+        <div className="space-y-8">
+          <ProjectForm user={user} onProjectSubmitted={handleProjectSubmitted} />
+          <ProjectsList user={user} refreshTrigger={refreshTrigger} />
+        </div>
+      )}
+    </AuthWrapper>
   );
 };
 
