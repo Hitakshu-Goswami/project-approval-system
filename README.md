@@ -59,7 +59,7 @@ A smart project evaluation tool that leverages AI for intelligent feedback, seam
 - **Tailwind CSS** – Utility-first CSS
 - **shadcn/ui** – UI components
 - **Supabase** – Auth & backend
-- **Google Gemini AI** – AI-powered evaluation (optional)
+- **Google Gemini AI** – AI-powered evaluation
 
 ---
 
@@ -95,7 +95,7 @@ To unlock enhanced feedback:
 
 - Node.js v18+
 - Supabase project
-- (Optional) Gemini API key
+- Gemini API key
 
 ### 📦 Installation
 
