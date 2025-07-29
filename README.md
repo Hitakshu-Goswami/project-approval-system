@@ -59,6 +59,109 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase (Backend & Authentication)
+- Google Gemini AI (for project evaluation)
+
+## Setting up AI Evaluation
+
+The project includes an AI-powered evaluation system that uses Google's Gemini API. The system works with a fallback mechanism:
+
+### Basic Evaluation (Default)
+The application includes a built-in evaluation system that works immediately without any setup. It evaluates projects based on:
+- Title clarity and length
+- Description detail and completeness
+- Presence of clear goals and objectives
+- Overall project structure
+
+### Full AI Evaluation (Optional)
+For enhanced AI evaluation using Google Gemini:
+
+1. Get a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Set the `GEMINI_API_KEY` environment variable in your Supabase project
+3. The system will automatically use AI evaluation when the key is available
+
+**Note**: The application works perfectly without the Gemini API key - it will use the built-in evaluation system as a fallback.
+
+## 🚀 Features
+
+### 📝 Project Management
+- **Submit Projects**: Create new projects with detailed descriptions
+- **Smart Evaluation**: AI-powered project assessment using Google Gemini
+- **Edit & Re-evaluate**: Update rejected projects based on feedback
+- **Visual Feedback**: Celebration animations for approvals, feedback indicators for rejections
+- **Real-time Updates**: Instant status updates and notifications
+
+### 🎨 User Experience
+- **Modern UI**: Clean, professional design with smooth animations
+- **Responsive Design**: Works perfectly on desktop and mobile
+- **Interactive Elements**: Hover effects, transitions, and micro-interactions
+- **Status Indicators**: Color-coded badges with icons for clear project status
+- **Celebration Animations**: 🎉 Confetti for approvals, 📋 feedback indicators for rejections
+
+### 🤖 AI Integration
+- **Gemini AI Evaluation**: Intelligent project assessment with detailed feedback
+- **Fallback System**: Basic evaluation when AI is unavailable
+- **Smart Suggestions**: Specific recommendations for improvement
+- **Professional Analysis**: Comprehensive review of feasibility, impact, and technical soundness
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+- Node.js 18+ and npm
+- Supabase account
+- Google Gemini API key (optional, for AI evaluation)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd ai-approve-flow
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Supabase**
+   - Create a new Supabase project
+   - Copy your project URL and anon key
+   - Update `src/integrations/supabase/client.ts` with your credentials
+
+4. **Configure Gemini AI (Optional)**
+   - Get an API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Set the `GEMINI_API_KEY` environment variable in your Supabase project
+   - Or use the built-in fallback evaluation system
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+### Deployment
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to your preferred platform**
+   - Vercel, Netlify, or any static hosting service
+   - Make sure to set environment variables in your deployment platform
+
+## 🎯 Usage
+
+### Project Submission Flow
+1. **Submit** your project with a clear title and detailed description
+2. **Evaluate** using the AI-powered evaluation system
+3. **Review** feedback and suggestions for improvement
+4. **Edit** and re-evaluate if needed until approved
+
+### Project Status Flow
+- **Pending** 🟡 → Ready for evaluation
+- **Approved** 🟢 → Project meets criteria with celebration animation
+- **Rejected** 🔴 → Needs improvement with feedback animation
 
 ## How can I deploy this project?
 

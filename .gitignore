@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.development
+supabase/functions/.env
+*.key
+
+# Supabase
+supabase/.temp/
+supabase/.branches/
+supabase/.git/
+
+# API keys and sensitive files
+**/index-with-key.ts
+**/*-with-key.*
+
+# Test files
+test-*.js
