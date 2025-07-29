@@ -105,7 +105,7 @@ export function ProjectsList({ user, refreshTrigger }: ProjectsListProps) {
 
     console.log('Using direct Gemini API call');
 
-    const GEMINI_API_KEY = 'AIzaSyDKcMM9_hMl_JfF0wN1PBQ6YMKvhIfiD5g';
+    const GEMINI_API_KEY = 'Gx2pVqL7z8NHYB0wfKMiXrjdqUAeCtvZ1R6gPmo';
 
     const prompt = `
 You are an AI project evaluator. Please evaluate the following project and provide:
